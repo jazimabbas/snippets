@@ -17,8 +17,8 @@
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.10.0",
-  "dependencies": {
-    "plop": "^4.0.1"
+  "peerDependencies": {
+    "plop": ">=4.x.x"
   },
   "devDependencies": {
     "@types/node": "^22.15.3",
