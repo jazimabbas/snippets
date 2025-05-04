@@ -1,6 +1,6 @@
 import path from "path";
 import { NodePlopAPI } from "plop";
-import { templatesDir } from "../utils/helpers";
+import { templatesDir } from "../utils/constants";
 
 export const zustandGenerator = (plop: NodePlopAPI) => {
   plop.setGenerator("zustand", {

@@ -14,5 +14,7 @@ LICENSE
 eslint.*
 .eslintignore
 plopfile.*
+tsup.config.ts
+tsconfig.json
 
 .DS_Store

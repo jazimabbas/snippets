@@ -1,16 +1,27 @@
 {
   "name": "@jazim/snippets",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "",
+  "type": "module",
   "files": [
-    "src",
+    "dist",
     "templates"
   ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
   },
   "scripts": {
-    "plop": "cross-env NODE_OPTIONS='--import tsx' plop --plopfile=plopfile.ts"
+    "plop": "cross-env NODE_OPTIONS='--import tsx' plop --plopfile=plopfile.ts",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +30,9 @@
   "devDependencies": {
     "@types/node": "^22.15.3",
     "cross-env": "^7.0.3",
+    "plop": "^4.0.1",
+    "tsup": "^8.4.0",
     "tsx": "^4.19.4",
-    "plop": "^4.0.1"
+    "typescript": "^5.8.3"
   }
 }
