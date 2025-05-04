@@ -1,7 +1,9 @@
 import { NodePlopAPI } from "plop";
 
 import { runGenerator } from "./actions/runGenerator";
-import { eslintGenerator } from "./eslint";
+import { eslintGenerator } from "./generators/eslint";
+import { zustandGenerator } from "./generators/zustand";
+import { lowerCase } from "./helpers/lowercase";
 
 /**
  * Configures Plop generators and actions
@@ -11,10 +13,18 @@ import { eslintGenerator } from "./eslint";
 export const configure = (plop: NodePlopAPI) => {
   return {
     /**
+     * Initializes and registers all helpers
+     */
+    registerHelpers: () => {
+      lowerCase(plop);
+    },
+
+    /**
      * Initializes and registers all actions
      */
     registerActions: () => {
       runGenerator(plop);
+      zustandGenerator(plop);
     },
 
     generators: {
@@ -26,6 +36,7 @@ export const configure = (plop: NodePlopAPI) => {
       },
 
       eslint: () => eslintGenerator(plop),
+      zustand: () => zustandGenerator(plop),
     },
   };
 };

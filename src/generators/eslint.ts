@@ -1,6 +1,6 @@
 import { NodePlopAPI } from "plop";
 import path from "path";
-import { templatesDir } from "./utils/helpers";
+import { templatesDir } from "../utils/helpers";
 
 export const eslintGenerator = (plop: NodePlopAPI) => {
   plop.setGenerator("controller", {
