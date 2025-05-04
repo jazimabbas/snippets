@@ -24,7 +24,6 @@ export const configure = (plop: NodePlopAPI) => {
      */
     registerActions: () => {
       runGenerator(plop);
-      zustandGenerator(plop);
     },
 
     generators: {
@@ -33,6 +32,7 @@ export const configure = (plop: NodePlopAPI) => {
        */
       initializeAll: () => {
         eslintGenerator(plop);
+        zustandGenerator(plop);
       },
 
       eslint: () => eslintGenerator(plop),

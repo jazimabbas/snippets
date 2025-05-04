@@ -1,8 +1,7 @@
 {
   "name": "@jazim/snippets",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "",
-  "type": "module",
   "files": [
     "src",
     "templates"
@@ -17,12 +16,10 @@
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.10.0",
-  "peerDependencies": {
-    "plop": ">=4.x.x"
-  },
   "devDependencies": {
     "@types/node": "^22.15.3",
     "cross-env": "^7.0.3",
-    "tsx": "^4.19.4"
+    "tsx": "^4.19.4",
+    "plop": "^4.0.1"
   }
 }
